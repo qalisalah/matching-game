@@ -1,0 +1,155 @@
+body {
+    background: #ff8b00;
+    
+    color:white;
+
+    font-family: 'Playfair Display', serif;
+
+}
+
+body header {
+
+    height: 10vh;
+
+    width: 100%;
+
+    margin: auto;
+
+    position: relative;
+
+}
+
+body header .timer {
+    position: absolute;
+
+    top: 14%;
+
+    left: 3%;
+
+    font-size: 20px;
+
+    background: #ff0130;
+
+    width: 8vh;
+
+    height: 8vh;
+
+    line-height: 8vh;
+
+    border-radius: 4vh;
+
+    text-align: center;
+}
+
+.game-container {
+    
+    height: 90vh;
+    
+    width: 100%;
+
+    position: relative;
+
+    margin: 0 auto;
+
+}
+
+.card-area {
+    -webkit-perspective: 1000;
+    
+    -moz-perspective: 1000;
+    
+    perspective: 1000;
+
+    height: 22%;
+
+    margin: 1%;
+
+    cursor: pointer;
+}
+
+.card-area .flip-it {
+    -webkit-transform: rotateY(180deg);
+
+    -moz-transform: rotateY(180deg);
+
+    -ms-transform: rotateY(180deg);
+
+    -o-transform: rotateY(180deg);
+
+    transform: rotateY(180deg);
+}
+
+.card-area, .front, .back {
+    width: 23%;
+    
+    float: left;
+
+    border-radius: 12px;
+
+}
+
+.flip-it {
+    -webkit-transition: 00.6s;
+
+    -moz-transition: 00.6s;
+
+    transition: 00.6s;
+
+    transform-style: preserve-3d;
+
+    height: 100%;
+
+    position: relative;
+}
+
+.flip-it .front, .flip-it .back {
+
+    -webkit-backface-visibility: hidden;
+
+    backface-visibility: hidden;
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    height: 100%;
+
+    width: 100%;
+
+    box-shadow: #ff5100 0 8px 2px;
+
+}
+
+.flip-it .front {
+
+    -webkit-transform: rotateY(0deg);
+
+    -moz-transform: rotateY(0deg);
+
+    -ms-transform: rotateY(0deg);
+
+    -o-transform: rotateY(0deg);
+
+    transform: rotateY(0deg);
+
+    background: #ffd300;
+
+}
+
+.flip-it .back {
+
+    -webkit-transform: rotateY(180deg);
+
+    -moz-transform: rotateY(180deg);
+
+    -ms-transform: rotateY(180deg);
+
+    -o-transform: rotateY(180deg);
+
+    transform: rotateY(180deg);
+
+    border: 1px solid #ff0130;
+    
+}
